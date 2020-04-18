@@ -2,19 +2,23 @@
 
 package main
 
-import "unsafe"
+import (
+	"unsafe"
 
-import _ "runtime/cgo"
-
-import "syscall"
+	_ "runtime/cgo"
+	"syscall"
+)
 
 var _ syscall.Errno
+
 func _Cgo_ptr(ptr unsafe.Pointer) unsafe.Pointer { return ptr }
 
 //go:linkname _Cgo_always_false runtime.cgoAlwaysFalse
 var _Cgo_always_false bool
+
 //go:linkname _Cgo_use runtime.cgoUse
 func _Cgo_use(interface{})
+
 type _Ctype_void [0]byte
 
 //go:linkname _cgo_runtime_cgocall runtime.cgocall
@@ -28,4 +32,3 @@ func _cgoCheckPointer(interface{}, ...interface{})
 
 //go:linkname _cgoCheckResult runtime.cgoCheckResult
 func _cgoCheckResult(interface{})
-

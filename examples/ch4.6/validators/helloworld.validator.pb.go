@@ -12,12 +12,17 @@ It has these top-level messages:
 */
 package main
 
-import regexp "regexp"
-import fmt "fmt"
-import go_proto_validators "github.com/mwitkow/go-proto-validators"
-import proto "github.com/golang/protobuf/proto"
-import math "math"
-import _ "github.com/mwitkow/go-proto-validators"
+import (
+	fmt "fmt"
+	regexp "regexp"
+
+	proto "github.com/golang/protobuf/proto"
+	go_proto_validators "github.com/mwitkow/go-proto-validators"
+
+	math "math"
+
+	_ "github.com/mwitkow/go-proto-validators"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

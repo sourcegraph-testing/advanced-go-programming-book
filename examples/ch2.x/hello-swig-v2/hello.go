@@ -35,22 +35,19 @@ extern void _wrap_SayHello_hello_679051ef4cde42b8(void);
 */
 import "C"
 
-import "unsafe"
-import _ "runtime/cgo"
-import "sync"
-
+import (
+	_ "runtime/cgo"
+	"sync"
+	"unsafe"
+)
 
 type _ unsafe.Pointer
-
-
 
 var Swig_escape_always_false bool
 var Swig_escape_val interface{}
 
-
 type _swig_fnptr *byte
 type _swig_memberptr *byte
-
 
 type _ sync.Mutex
 
@@ -69,5 +66,3 @@ func Swig_malloc(arg1 int) (_swig_ret uintptr) {
 func SayHello() {
 	C._wrap_SayHello_hello_679051ef4cde42b8()
 }
-
-

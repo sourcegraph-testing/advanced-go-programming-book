@@ -3,10 +3,15 @@
 
 package main // import "main"
 
-import proto "github.com/golang/protobuf/proto"
-import fmt "fmt"
-import math "math"
-import descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
+import (
+	fmt "fmt"
+
+	proto "github.com/golang/protobuf/proto"
+
+	math "math"
+
+	descriptor "github.com/golang/protobuf/protoc-gen-go/descriptor"
+)
 
 // Reference imports to suppress errors if they are not otherwise used.
 var _ = proto.Marshal

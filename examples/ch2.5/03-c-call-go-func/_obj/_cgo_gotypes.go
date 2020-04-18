@@ -2,19 +2,23 @@
 
 package main
 
-import "unsafe"
+import (
+	"unsafe"
 
-import _ "runtime/cgo"
-
-import "syscall"
+	_ "runtime/cgo"
+	"syscall"
+)
 
 var _ syscall.Errno
+
 func _Cgo_ptr(ptr unsafe.Pointer) unsafe.Pointer { return ptr }
 
 //go:linkname _Cgo_always_false runtime.cgoAlwaysFalse
 var _Cgo_always_false bool
+
 //go:linkname _Cgo_use runtime.cgoUse
 func _Cgo_use(interface{})
+
 type _Ctype_int int32
 
 type _Ctype_void [0]byte
@@ -38,7 +42,7 @@ func _cgoCheckResult(interface{})
 //go:norace
 func _cgoexp_8313eaf44386_sum(a unsafe.Pointer, n int32, ctxt uintptr) {
 	fn := _cgoexpwrap_8313eaf44386_sum
-	_cgo_runtime_cgocallback(**(**unsafe.Pointer)(unsafe.Pointer(&fn)), a, uintptr(n), ctxt);
+	_cgo_runtime_cgocallback(**(**unsafe.Pointer)(unsafe.Pointer(&fn)), a, uintptr(n), ctxt)
 }
 
 func _cgoexpwrap_8313eaf44386_sum(p0 _Ctype_int, p1 _Ctype_int) (r0 _Ctype_int) {
